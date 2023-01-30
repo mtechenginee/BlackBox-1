@@ -49,6 +49,11 @@ public class FileUtils {
         }
         return filename.substring(dotPos + 1);
     }
+    public static String getExternalStorageDir() {
+
+        return Environment.getExternalStorageDirectory().getAbsolutePath();
+
+    }
 
     public static File changeExt(File f, String targetExt) {
         String outPath = f.getAbsolutePath();
