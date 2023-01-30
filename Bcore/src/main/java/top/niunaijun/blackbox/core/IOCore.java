@@ -68,7 +68,7 @@ public class IOCore {
     public String redirectPath(String path) {
         if (TextUtils.isEmpty(path))
             return path;
-        if (path.contains("/blackbox/")) {
+        if (path.contains("/Akatski-Test/")) {
             return path;
         }
         String search = sBlackTree.search(path);
