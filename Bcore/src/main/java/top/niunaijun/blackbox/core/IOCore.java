@@ -119,10 +119,10 @@ public class IOCore {
             ApplicationInfo packageInfo = BlackBoxCore.getBPackageManager().getApplicationInfo(packageName, PackageManager.GET_META_DATA, BActivityThread.getUserId());
             int systemUserId = BlackBoxCore.getHostUserId();
             rule.put(String.format("/data/data/%s/lib", packageName), packageInfo.nativeLibraryDir);
-            rule.put(String.format("/data/user/%d/%s/lib", Integer.valueOf(systemUserId), packageName), applicationInfo.nativeLibraryDir);
+            rule.put(String.format("/data/user/%d/%s/lib", Integer.valueOf(systemUserId), packageName), packageInfo.nativeLibraryDir);
 
             rule.put(String.format("/data/data/%s", packageName), packageInfo.dataDir);
-            rule.put(String.format("/data/user/%d/%s", Integer.valueOf(systemUserId), packageName), applicationInfo.dataDir);
+            rule.put(String.format("/data/user/%d/%s", Integer.valueOf(systemUserId), packageName), packageInfo.dataDir);
 
             if (BlackBoxCore.getContext().getExternalCacheDir() != null && context.getExternalCacheDir() != null) {
                 File external = BEnvironment.getExternalUserDir(BActivityThread.getUserId());
