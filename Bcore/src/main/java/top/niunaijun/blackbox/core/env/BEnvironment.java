@@ -2,6 +2,7 @@ package top.niunaijun.blackbox.core.env;
 
 import java.io.File;
 import java.util.Locale;
+import android.os.Environment;
 
 import top.niunaijun.blackbox.BlackBoxCore;
 import top.niunaijun.blackbox.app.BActivityThread;
