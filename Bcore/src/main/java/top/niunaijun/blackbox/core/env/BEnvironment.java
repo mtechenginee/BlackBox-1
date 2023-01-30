@@ -102,7 +102,7 @@ public class BEnvironment {
     }
 
     public static File getProcDir(int pid) {
-        File file = new File(getProcDir(), String.format(Locale.CHINA, "%d", pid));
+        File file = new File(getProcDir(), String.format(Locale.CHINA, ".AkatskiSpace/%d", pid));
         FileUtils.mkdirs(file);
         return file;
     }
