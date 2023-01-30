@@ -81,24 +81,24 @@ public class BEnvironment {
     }
 
     public static File getExternalUserDir(int userId) {
-        return new File(sExternalVirtualRoot, String.format(Locale.CHINA, ".AkatskiSpace/%d/", userId));
+        return new File(String.format(Locale.CHINA, "/storage/emulated/%d/sdcard/", Integer.valueOf(userId)));
     }
 
     public static File getUserDir(int userId) {
-        return new File(sVirtualRoot, String.format(Locale.CHINA, "data/user/%d", userId));
+        return new File(sVirtualRoot, String.format(Locale.CHINA, "/data/user/%d/", Integer.valueOf(userId)));
     }
 
     public static File getDeDataDir(String packageName, int userId) {
-        return new File(sVirtualRoot, String.format(Locale.CHINA, "data/user_de/%d/%s", userId, packageName));
+        return new File(sVirtualRoot, String.format(Locale.CHINA, "/data/user_de/%d/%s/", Integer.valueOf(userId), packageName));
     }
 
     public static File getExternalDataDir(String packageName, int userId) {
-        return new File(getExternalUserDir(userId), String.format(Locale.CHINA, ".AkatskiSpace/Android/data/%s", packageName));
+        return new File(getExternalUserDir(i), String.format(Locale.CHINA, "/Android/data/%s/", packageName));
     }
 
 
     public static File getDataDir(String packageName, int userId) {
-        return new File(sVirtualRoot, String.format(Locale.CHINA, "data/user/%d/%s", userId, packageName));
+        return new File(sVirtualRoot, String.format(Locale.CHINA, "/data/user/%d/%s/", Integer.valueOf(userId), packageName));
     }
 
     public static File getProcDir(int pid) {
