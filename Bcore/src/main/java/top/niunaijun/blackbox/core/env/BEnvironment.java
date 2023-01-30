@@ -93,7 +93,7 @@ public class BEnvironment {
     }
 
     public static File getExternalDataDir(String packageName, int userId) {
-        return new File(getExternalUserDir(i), String.format(Locale.CHINA, "/Android/data/%s/", packageName));
+        return new File(getExternalUserDir(userId), String.format(Locale.CHINA, "/Android/data/%s/", packageName));
     }
 
 
