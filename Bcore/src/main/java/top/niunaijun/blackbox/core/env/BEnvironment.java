@@ -17,7 +17,7 @@ import top.niunaijun.blackbox.utils.FileUtils;
  */
 public class BEnvironment {
     private static final File sVirtualRoot = new File(BlackBoxCore.getContext().getCacheDir().getParent(), "");
-    private static final File sExternalVirtualRoot = BlackBoxCore.getContext().getExternalFilesDir("AkatskiGamespace");
+    private static final File sExternalVirtualRoot = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+"AkatskiGamespace");
 
     public static File JUNIT_JAR = new File(getCacheDir(), "junit.apk");
     public static File EMPTY_JAR = new File(getCacheDir(), "empty.apk");
