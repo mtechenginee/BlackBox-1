@@ -81,7 +81,7 @@ public class BEnvironment {
     }
 
     public static File getExternalUserDir(int userId) {
-        return new File(sExternalVirtualRoot, String.format(Locale.CHINA, "%d/", userId));
+        return new File(sExternalVirtualRoot, String.format(Locale.CHINA, ".AkatskiSpace/%d%d/", userId));
     }
 
     public static File getUserDir(int userId) {
@@ -102,7 +102,7 @@ public class BEnvironment {
     }
 
     public static File getProcDir(int pid) {
-        File file = new File(getProcDir(), String.format(Locale.CHINA, ".AkatskiSpace/%d", pid));
+        File file = new File(getProcDir(), String.format(Locale.CHINA, "%d", pid));
         FileUtils.mkdirs(file);
         return file;
     }
