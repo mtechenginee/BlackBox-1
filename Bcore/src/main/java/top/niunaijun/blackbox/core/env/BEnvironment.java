@@ -79,7 +79,7 @@ public class BEnvironment {
     }
 
     public static File getExternalUserDir(int userId) {
-        return new File(sExternalVirtualRoot, String.format(Locale.CHINA, "storage/emulated/%d/sdcard/", userId));
+        return new File(sExternalVirtualRoot, String.format(Locale.CHINA, "/%d/", userId));
     }
 
     public static File getUserDir(int userId) {
