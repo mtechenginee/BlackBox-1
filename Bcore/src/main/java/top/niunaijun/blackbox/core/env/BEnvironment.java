@@ -17,7 +17,7 @@ import top.niunaijun.blackbox.utils.FileUtils;
  * 此处无Bug
  */
 public class BEnvironment {
-    private static final maima
+  
     private static final File sVirtualRoot = new File(BlackBoxCore.getContext().getCacheDir().getParent(), "blackbox");
     private static final String sExternalVirtualRoot = FileUtils.getExternalStorageDir().concat("/.AkatskiSpace");
 
