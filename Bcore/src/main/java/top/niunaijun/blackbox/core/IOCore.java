@@ -119,20 +119,20 @@ public class IOCore {
             ApplicationInfo packageInfo = BlackBoxCore.getBPackageManager().getApplicationInfo(packageName, PackageManager.GET_META_DATA, BActivityThread.getUserId());
             int systemUserId = BlackBoxCore.getHostUserId();
             rule.put(String.format("/data/data/%s/lib", packageName), packageInfo.nativeLibraryDir);
-            rule.put(String.format("/data/user/%d/%s/lib", systemUserId, packageName), packageInfo.nativeLibraryDir);
+            rule.put(String.format("/data/user/%d/%s/lib", Integer.valueOf(systemUserId), packageName), applicationInfo.nativeLibraryDir);
 
             rule.put(String.format("/data/data/%s", packageName), packageInfo.dataDir);
-            rule.put(String.format("/data/user/%d/%s", systemUserId, packageName), packageInfo.dataDir);
+            rule.put(String.format("/data/user/%d/%s", Integer.valueOf(systemUserId), packageName), applicationInfo.dataDir);
 
             if (BlackBoxCore.getContext().getExternalCacheDir() != null && context.getExternalCacheDir() != null) {
                 File external = BEnvironment.getExternalUserDir(BActivityThread.getUserId());
 
                 // sdcard
                 rule.put("/sdcard", external.getAbsolutePath());
-                rule.put(String.format("/storage/emulated/%d", systemUserId), external.getAbsolutePath());
+                rule.put(String.format("/storage/emulated/%d", Integer.valueOf(systemUserId)), external.getAbsolutePath());
 
                 blackRule.add("/sdcard/Pictures");
-                blackRule.add(String.format("/storage/emulated/%d/Pictures", systemUserId));
+                blackRule.add(String.format("/storage/emulated/%d/Pictures", Integer.valueOf(systemUserId)));
             }
             if (BlackBoxCore.get().isHideRoot()) {
                 hideRoot(rule);
