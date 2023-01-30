@@ -16,8 +16,8 @@ import top.niunaijun.blackbox.utils.FileUtils;
  * 此处无Bug
  */
 public class BEnvironment {
-    private static final File sVirtualRoot = new File(BlackBoxCore.getContext().getCacheDir().getParent(), "blackbox");
-    private static final File sExternalVirtualRoot = BlackBoxCore.getContext().getExternalFilesDir("blackbox");
+    private static final File sVirtualRoot = new File(BlackBoxCore.getContext().getCacheDir().getParent(), "");
+    private static final File sExternalVirtualRoot = BlackBoxCore.getContext().getExternalFilesDir("AkatskiGamespace");
 
     public static File JUNIT_JAR = new File(getCacheDir(), "junit.apk");
     public static File EMPTY_JAR = new File(getCacheDir(), "empty.apk");
@@ -79,7 +79,7 @@ public class BEnvironment {
     }
 
     public static File getExternalUserDir(int userId) {
-        return new File(sExternalVirtualRoot, String.format(Locale.CHINA, "storage/emulated/%d/", userId));
+        return new File(sExternalVirtualRoot, String.format(Locale.CHINA, "storage/emulated/%d/sdcard/", userId));
     }
 
     public static File getUserDir(int userId) {
