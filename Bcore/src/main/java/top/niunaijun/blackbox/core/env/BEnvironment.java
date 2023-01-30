@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.Locale;
 
 import top.niunaijun.blackbox.BlackBoxCore;
+import android.os.Environment;
 import top.niunaijun.blackbox.app.BActivityThread;
 import top.niunaijun.blackbox.utils.FileUtils;
 
