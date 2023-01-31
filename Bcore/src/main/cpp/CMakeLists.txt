@@ -18,7 +18,7 @@ aux_source_directory(Hook SRC3)
 aux_source_directory(JniHook SRC4)
 add_compile_options(-w)
 add_library( # Sets the name of the library.
-        blackbox
+        ABridge
         # Sets the library as a shared library.
         SHARED
         # Provides a relative path to your source file(s).
@@ -47,7 +47,7 @@ find_library( # Sets the name of the path variable.
 # build script, prebuilt third-party libraries, or system libraries.
 
 target_link_libraries( # Specifies the target library.
-        blackbox
+        ABridge
         # Links the target library to the log library
         # included in the NDK.
         ${log-lib}
