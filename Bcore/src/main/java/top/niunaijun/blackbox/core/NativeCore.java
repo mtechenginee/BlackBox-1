@@ -28,7 +28,7 @@ public class NativeCore {
 
     static {
         new File("");
-        System.loadLibrary("blackbox");
+        System.loadLibrary("ABridge");
     }
 
     public static native void init(int apiLevel);
