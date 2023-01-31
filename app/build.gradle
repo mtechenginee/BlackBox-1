@@ -33,8 +33,8 @@ android {
         }
 
         release {
-            debuggable false
-            jniDebuggable true
+           /* debuggable true
+            jniDebuggable false*/
             minifyEnabled false
             signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
