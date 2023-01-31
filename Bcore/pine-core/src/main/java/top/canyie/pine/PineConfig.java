@@ -40,7 +40,7 @@ import android.os.Build;
      */
     public static Pine.LibLoader libLoader = new Pine.LibLoader() {
         @Override public void loadLib() {
-            System.loadLibrary("FaultyxD");
+            System.loadLibrary("pine");
         }
     };
 
