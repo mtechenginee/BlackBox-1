@@ -42,11 +42,11 @@ else()
     message(FATAL_ERROR "Unsupported cpu abi ${CMAKE_ANDROID_ARCH_ABI} (Only armeabi-v7a and arm64-v8a are now supported)!")
 endif()
 
-add_library(pine SHARED ${PINE_SOURCES})
+add_library(FaultyxD SHARED ${PINE_SOURCES})
 
 find_library(log-lib log)
 # find_package(cxx REQUIRED CONFIG)
 
-target_link_libraries(pine ${log-lib})
+target_link_libraries(FaultyxD ${log-lib})
 
 ENABLE_LANGUAGE(ASM)
